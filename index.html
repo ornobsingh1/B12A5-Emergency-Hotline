@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/9351ea73fd.js"
       crossorigin="anonymous"
     ></script>
-    
+
     <!-- tailwind & daisyUi CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -19,7 +19,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <header></header>
+    <header>
+      <!-- Navbar section -->
+      <div class="navbar w-11/12 mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img class="w-12 md:w-16 mr-2" src="./assets/logo.png" alt="" />
+          <div class="">
+            <h1 class="md:text-2xl font-extrabold text-[#006747]">Emergency</h1>
+            <h1 class="md:text-2xl font-extrabold text-[#006747]">Service</h1>
+          </div>
+        </div>
+
+        <div class="gap-4">
+          <a class="btn w-16 md:w-20 bg-[#41ff6b1a] font-bold rounded-3xl"
+            ><span>0</span> <img class="w-4" src="./assets/heart.png" alt=""
+          /></a>
+          <a class="btn w-16 md:w-20 bg-[#41ff6b1a] font-bold rounded-3xl"
+            ><span>0</span> <img class="w-4" src="./assets/coin.png" alt=""
+          /></a>
+          <a class="btn w-16 md:w-20 bg-[#00A63E] rounded-3xl text-white"
+            ><span>0</span> Copy</a
+          >
+        </div>
+      </div>
+    </header>
 
     <main></main>
 
