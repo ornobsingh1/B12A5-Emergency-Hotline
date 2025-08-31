@@ -23,3 +23,7 @@ for (const callBtn of callButtons) {
     cartContainer.appendChild(newCart);
   });
 }
+
+document.getElementById("clear-btn").addEventListener("click", function () {
+  document.getElementById("cart-container").innerHTML = "";
+});
