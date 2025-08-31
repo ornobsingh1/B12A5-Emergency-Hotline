@@ -1,6 +1,25 @@
+const hearts = document.querySelectorAll(".heart-icon");
+for (const heart of hearts) {
+  heart.addEventListener("click", function () {
+    const countHeart = document.getElementById("count-heart").innerText;
+    const currentHeart = Number(countHeart) + 1;
+    document.getElementById("count-heart").innerText = currentHeart;
+  });
+}
+
 const callButtons = document.getElementsByClassName("call-btn");
 for (const callBtn of callButtons) {
   callBtn.addEventListener("click", function () {
+    let countCoin = parseInt(document.getElementById("count-coin").innerText);
+
+    if (countCoin >= 20) {
+      countCoin -= 20;
+      document.getElementById("count-coin").innerText = countCoin;
+      alert("Call Possible");
+    } else {
+      return alert("Not Enough Coins");
+    }
+
     const serviceTitle = callBtn.parentNode.parentNode.children[1].innerText;
     const serviceNumber = callBtn.parentNode.parentNode.children[3].innerText;
     const currentTime = new Date().toLocaleTimeString();

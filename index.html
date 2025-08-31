@@ -32,10 +32,12 @@
 
         <div class="gap-4">
           <a class="btn w-16 md:w-20 bg-[#41ff6b1a] font-bold rounded-3xl"
-            ><span>0</span> <img class="w-4" src="./assets/heart.png" alt=""
+            ><span id="count-heart">0</span>
+            <img class="w-4" src="./assets/heart.png" alt=""
           /></a>
           <a class="btn w-16 md:w-20 bg-[#41ff6b1a] font-bold rounded-3xl"
-            ><span>100</span> <img class="w-4" src="./assets/coin.png" alt=""
+            ><span id="count-coin">100</span>
+            <img class="w-4" src="./assets/coin.png" alt=""
           /></a>
           <a class="btn w-16 md:w-20 bg-[#00A63E] rounded-3xl text-white"
             ><span>0</span> Copy</a
@@ -78,7 +80,9 @@
                   src="./assets/emergency.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">National Emergency Number</h2>
               <h4 class="text-md text-gray-600 mb-2">National Emergency</h4>
@@ -108,7 +112,9 @@
                   src="./assets/police.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">Police Helpline Number</h2>
               <h4 class="text-md text-gray-600 mb-2">Police</h4>
@@ -138,7 +144,9 @@
                   src="./assets/fire-service.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">Fire Service Number</h2>
               <h4 class="text-md text-gray-600 mb-2">Fire Service</h4>
@@ -168,7 +176,9 @@
                   src="./assets/ambulance.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">Ambulance Service</h2>
               <h4 class="text-md text-gray-600 mb-2">Ambulance</h4>
@@ -198,7 +208,9 @@
                   src="./assets/emergency.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">Women & Child Helpline</h2>
               <h4 class="text-md text-gray-600 mb-2">Women & Child Helpline</h4>
@@ -228,7 +240,9 @@
                   src="./assets/emergency.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">Anti-Corruption Helpline</h2>
               <h4 class="text-md text-gray-600 mb-2">Anti-Corruption</h4>
@@ -258,7 +272,9 @@
                   src="./assets/emergency.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">Electricity Helpline</h2>
               <h4 class="text-md text-gray-600 mb-2">Electricity Outage</h4>
@@ -288,7 +304,9 @@
                   src="./assets/brac.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">Brac Helpline</h2>
               <h4 class="text-md text-gray-600 mb-2">Brac</h4>
@@ -318,7 +336,9 @@
                   src="./assets/Bangladesh-Railway.png"
                   alt=""
                 />
-                <i class="fa-regular fa-heart text-2xl cursor-pointer"></i>
+                <i
+                  class="fa-regular fa-heart text-2xl cursor-pointer heart-icon"
+                ></i>
               </div>
               <h2 class="text-2xl font-bold">Bangladesh Railway Helpline</h2>
               <h4 class="text-md text-gray-600 mb-2">Bangladesh Railway</h4>
@@ -348,9 +368,12 @@
             <h1 class="text-lg font-bold">
               <span><i class="fa-regular fa-clock"></i></span> Call History
             </h1>
-            <button id="clear-btn"
+            <button
+              id="clear-btn"
               class="btn w-16 md:w-20 bg-[#00A63E] text-lg rounded-3xl text-white"
-              >Clear</button>
+            >
+              Clear
+            </button>
           </div>
           <div id="cart-container"></div>
         </aside>
