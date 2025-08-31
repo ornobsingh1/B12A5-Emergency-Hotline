@@ -7,22 +7,22 @@ for (const heart of hearts) {
   });
 }
 
-const callButtons = document.getElementsByClassName("call-btn");
+const callButtons = document.querySelectorAll(".call-btn");
 for (const callBtn of callButtons) {
   callBtn.addEventListener("click", function () {
-    let countCoin = parseInt(document.getElementById("count-coin").innerText);
+    const serviceTitle = callBtn.parentNode.parentNode.children[1].innerText;
+    const serviceSubTitle = callBtn.parentNode.parentNode.children[2].innerText;
+    const serviceNumber = callBtn.parentNode.parentNode.children[3].innerText;
+    const currentTime = new Date().toLocaleTimeString();
 
+    let countCoin = parseInt(document.getElementById("count-coin").innerText);
     if (countCoin >= 20) {
       countCoin -= 20;
       document.getElementById("count-coin").innerText = countCoin;
-      alert("Call Possible");
+      alert(`Calling ${serviceSubTitle} Service ${serviceNumber}...`);
     } else {
       return alert("Not Enough Coins");
     }
-
-    const serviceTitle = callBtn.parentNode.parentNode.children[1].innerText;
-    const serviceNumber = callBtn.parentNode.parentNode.children[3].innerText;
-    const currentTime = new Date().toLocaleTimeString();
 
     const cartContainer = document.getElementById("cart-container");
     const newCart = document.createElement("div");
@@ -40,6 +40,19 @@ for (const callBtn of callButtons) {
       </div>
     `;
     cartContainer.appendChild(newCart);
+  });
+}
+
+const copyButtons = document.querySelectorAll(".copy-btn");
+for (const copyBtn of copyButtons) {
+  copyBtn.addEventListener("click", function () {
+    const serviceNumber = copyBtn.parentNode.parentNode.children[3].innerText;
+    navigator.clipboard.writeText(serviceNumber);
+
+    let countCopy = parseInt(document.getElementById("count-copy").innerText);
+    countCopy += 1;
+
+    alert("Number Copied Successfully");
   });
 }
 
