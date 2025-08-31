@@ -8,10 +8,8 @@ querySelectorAll -> selects all elements that match a given CSS selector.
 
 2. How do you create and insert a new element into the DOM?
 ans:
-// create
 const newDiv = document.createElement("div");
 newDiv.innerText = "New Div";
-// inserte
 const parentDiv = document.getElementById("parent-div");
 parentDiv.appendChild(newDiv);
 
