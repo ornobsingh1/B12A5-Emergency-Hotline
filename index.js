@@ -52,6 +52,8 @@ for (const copyBtn of copyButtons) {
     let countCopy = parseInt(document.getElementById("count-copy").innerText);
     countCopy += 1;
 
+    document.getElementById("count-copy").innerText = countCopy;
+
     alert("Number Copied Successfully");
   });
 }
